@@ -5,6 +5,9 @@ import Home from "../../main/project/Home";
 import AuthLayout from "../Applayouts/AuthLayout";
 import Login from "../../auth/Login";
 import Register from "../../auth/Register";
+import FilterData from "../../main/admin/FilterData";
+import AdminLayout from "../Applayouts/AdminLayout";
+import SearchData from "../../main/admin/SearchData";
 
 export default function Navigation() {
   return (
@@ -19,6 +22,10 @@ export default function Navigation() {
         <Route element={<AuthLayout />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+        </Route>
+        <Route element={<AdminLayout />}>
+          <Route path="filterdata" element={<FilterData />} />
+          <Route path="searchdata" element={<SearchData />} />
         </Route>
       </Routes>
     </BrowserRouter>
