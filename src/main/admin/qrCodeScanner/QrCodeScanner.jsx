@@ -31,7 +31,8 @@ export default function QrCodeScanner() {
       <div className="mt-[50px] border min-h-[500px]">
         {scanResult ? (
           <div>
-            Success : <a href={"http://" + scanResult}>{scanResult}</a>
+            Muhammad : Success :{" "}
+            <a href={"http://" + scanResult}>{scanResult}</a>
           </div>
         ) : (
           <div id="reader"></div>
