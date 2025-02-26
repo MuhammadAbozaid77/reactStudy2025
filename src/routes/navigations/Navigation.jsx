@@ -8,6 +8,8 @@ import Register from "../../auth/Register";
 import FilterData from "../../main/admin/FilterData";
 import AdminLayout from "../Applayouts/AdminLayout";
 import SearchData from "../../main/admin/SearchData";
+import FilterDataBySearchParams from "../../main/admin/filterData/FilterDataBySearchParams";
+import QrCodeScanner from "../../main/admin/qrCodeScanner/QrCodeScanner";
 
 export default function Navigation() {
   return (
@@ -24,8 +26,13 @@ export default function Navigation() {
           <Route path="register" element={<Register />} />
         </Route>
         <Route element={<AdminLayout />}>
+          <Route path="qrCodeScanner" element={<QrCodeScanner />} />
           <Route path="filterdata" element={<FilterData />} />
           <Route path="searchdata" element={<SearchData />} />
+          <Route
+            path="FilterDataBySearchParams"
+            element={<FilterDataBySearchParams />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
